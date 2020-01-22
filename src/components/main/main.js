@@ -26,7 +26,7 @@ export default class Main extends React.Component {
       return <Redirect to="/courses" />;
     }
     return (
-      <div>
+      <div className="header">
         <button onClick={this.myCourses}>Courses</button>
         <button onClick={this.myUsers}>Users</button>
       </div>

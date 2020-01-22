@@ -13,12 +13,12 @@ function App() {
   return (
     <div>
       <Provider store={store}>
-        <Main></Main>
         <Router>
-          <div>
+          <Main></Main>
+          <>
             <Route path="/users" component={Users} />
             <Route path="/courses" component={Courses} />
-          </div>
+          </>
         </Router>
       </Provider>
     </div>
