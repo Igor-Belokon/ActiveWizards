@@ -1,6 +1,5 @@
 import React from "react";
 
-import Main from "../src/components/main/main";
 import Courses from "../src/components/courses/courses";
 import Users from "../src/components/users/users";
 
@@ -14,7 +13,6 @@ function App() {
     <div>
       <Provider store={store}>
         <Router>
-          <Main></Main>
           <>
             <Route path="/users" component={Users} />
             <Route path="/courses" component={Courses} />

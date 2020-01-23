@@ -1,4 +1,4 @@
-import { REG_FORM, USER_REG, successAction, failureAction } from "../types";
+import { REG_FORM, USER, successAction, failureAction } from "../types";
 const initialState = {
   data: [
     {
@@ -73,10 +73,13 @@ const initialState = {
     }
   ]
 };
+var serialObj = JSON.stringify(initialState);
+
+localStorage.setItem("users", serialObj);
 
 export default function User(state = initialState, action) {
   switch (action.type) {
-    case successAction(USER_REG):
+    case successAction(USER):
       console.log(action);
       return {
         ...state,

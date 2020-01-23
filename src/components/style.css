@@ -1,5 +1,34 @@
 .header {
   width: 100%;
   height: 60px;
-  background-color: blueviolet;
+  background-color: rgb(92, 91, 92);
+  display: flex;
+  flex-direction: row-reverse;
+}
+.header-button {
+  height: 45px;
+  width: 90px;
+  border: 1px black solid;
+  border-radius: 5px;
+  margin: 7.5px;
+}
+.course-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border: 1px black solid;
+  border-radius: 10px;
+
+  margin: auto;
+}
+
+.course-line {
+  display: flex;
+  border: 1px black solid;
+  border-radius: 5px;
+  margin: 5px;
+}
+.course-item {
+  width: 50%;
+  margin: 7px;
 }
