@@ -9,7 +9,7 @@ class AddButton extends React.Component {
     var Id = prompt("Enter id");
     const course = {
       courseName: courseTitle,
-      id: Id
+      id: +Id
     };
     this.props.addCourse(course);
   };

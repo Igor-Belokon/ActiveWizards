@@ -17,7 +17,7 @@ class Courses extends React.Component {
   render() {
     const { courses } = this.state;
     if (courses) {
-      return <Redirect to="/courses" />;
+      return <Redirect to="/" />;
     }
     return (
       <div>

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import store from "./store";
+// const {store , persistor} =createStore()
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Router>
           <>
             <Route path="/users" component={Users} />
-            <Route path="/courses" component={Courses} />
+            <Route path="/" component={Courses} />
           </>
         </Router>
       </Provider>

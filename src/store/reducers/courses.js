@@ -35,7 +35,11 @@ export default function Courses(state = initialState, action) {
   switch (action.type) {
     case successAction(DELETE_COURSE):
       console.log(action);
-      return { ...state, id: null };
+      return {
+        ...state,
+        data: state.data.filter(course => course.id !== action.data)
+      };
+
     case successAction(COURSE):
       console.log(action);
       return {
