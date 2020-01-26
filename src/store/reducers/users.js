@@ -79,9 +79,6 @@ const initialState = {
     }
   ]
 };
-var serialObj = JSON.stringify(initialState);
-
-localStorage.setItem("users", serialObj);
 
 export default function User(state = initialState, action) {
   switch (action.type) {

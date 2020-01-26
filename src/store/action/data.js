@@ -13,13 +13,13 @@ export function deleteCourse(id) {
 export function addCourse(course) {
   return dispatch => dispatch({ type: successAction(COURSE), data: course });
 }
-export function editCourse(courseName) {
+export function editCourse(id, courseName) {
   return dispatch =>
-    dispatch({ type: successAction(EDIT_COURSE), data: courseName });
+    dispatch({ type: successAction(EDIT_COURSE), data: { id, courseName } });
 }
 export function deleteUser(id) {
-  return dispatch => dispatch({ type: successAction(DELETE_USER), data: id });
+  return { type: successAction(DELETE_USER), data: id };
 }
 export function addUser(user) {
-  return dispatch => dispatch({ type: successAction(USER), data: user });
+  return { type: successAction(USER), data: user };
 }

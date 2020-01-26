@@ -33,9 +33,6 @@ const initialState = {
     }
   ]
 };
-var serialObj = JSON.stringify(initialState);
-
-localStorage.setItem("courses", serialObj);
 
 export default function Courses(state = initialState, action) {
   switch (action.type) {
@@ -56,7 +53,11 @@ export default function Courses(state = initialState, action) {
       console.log(action);
       return {
         ...state,
-        data: [...state.data, action.data]
+        data: state.data.map(course =>
+          course.id !== action.data.id
+            ? course
+            : { ...course, courseName: action.data.courseName }
+        )
       };
 
     default:

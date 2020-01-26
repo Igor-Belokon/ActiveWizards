@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../src/components/style.css";
+
 import Courses from "../src/components/courses/courses";
 import Users from "../src/components/users/users";
 
@@ -12,7 +14,7 @@ const { store, persistor } = createStore();
 
 function App() {
   return (
-    <div>
+    <div className="app-style">
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Router>

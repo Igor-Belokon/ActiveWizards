@@ -30,6 +30,10 @@ class Courses extends React.Component {
         </div>
         <AddButton></AddButton>
         <div className="course-container">
+          <div>Name</div>
+          <div>Code</div>
+        </div>
+        <div className="course-container">
           {this.props.users.map(users => (
             <UserLine users={users}></UserLine>
           ))}
