@@ -15,7 +15,7 @@ class AddButton extends React.Component {
   };
 
   render() {
-    return <div onClick={this.Add}>+</div>;
+    return <div onClick={this.Add}>+Course</div>;
   }
 }
 export default connect(null, { addCourse })(AddButton);

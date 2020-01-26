@@ -6,6 +6,7 @@ import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { getUsers } from "../../store/selectors/selectors";
+import AddButton from "../usersChange/addUser";
 
 class Courses extends React.Component {
   state = {
@@ -27,6 +28,7 @@ class Courses extends React.Component {
           </div>
           <div className="header-button">Users</div>
         </div>
+        <AddButton></AddButton>
         <div className="course-container">
           {this.props.users.map(users => (
             <UserLine users={users}></UserLine>

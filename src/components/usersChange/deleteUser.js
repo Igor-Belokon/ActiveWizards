@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import "../style.css";
-import { deleteCourse } from "../../store/action/data";
+import { deleteUser } from "../../store/action/data";
 class DeleteButton extends React.Component {
   delete = () => {
-    this.props.deleteCourse(this.props.id);
+    this.props.deleteUser(this.props.id);
     console.log("card deleted");
   };
 
@@ -12,5 +12,5 @@ class DeleteButton extends React.Component {
     return <div onClick={this.delete}>D</div>;
   }
 }
-export default connect(null, { deleteCourse })(DeleteButton);
+export default connect(null, { deleteUser })(DeleteButton);
 //

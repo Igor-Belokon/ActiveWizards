@@ -29,8 +29,8 @@ class Courses extends React.Component {
           <div className="header-button" onClick={this.myUsers}>
             Users
           </div>
-          <AddButton></AddButton>
         </div>
+        <AddButton></AddButton>
         <div className="course-container">
           {this.props.courses.map(courses => (
             <CourseLine courses={courses}></CourseLine>

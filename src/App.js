@@ -3,7 +3,7 @@ import React from "react";
 import Courses from "../src/components/courses/courses";
 import Users from "../src/components/users/users";
 
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 

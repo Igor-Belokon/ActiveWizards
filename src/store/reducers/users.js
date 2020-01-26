@@ -1,4 +1,10 @@
-import { REG_FORM, USER, successAction, failureAction } from "../types";
+import {
+  REG_FORM,
+  USER,
+  successAction,
+  failureAction,
+  DELETE_USER
+} from "../types";
 const initialState = {
   data: [
     {
@@ -89,6 +95,12 @@ export default function User(state = initialState, action) {
       return {
         ...state,
         someData: [...state.someData, action.someData]
+      };
+    case successAction(DELETE_USER):
+      console.log(action);
+      return {
+        ...state,
+        data: state.data.filter(user => user.userId !== action.data)
       };
     default:
       return state;

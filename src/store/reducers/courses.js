@@ -1,4 +1,10 @@
-import { COURSE, successAction, failureAction, DELETE_COURSE } from "../types";
+import {
+  COURSE,
+  successAction,
+  failureAction,
+  DELETE_COURSE,
+  EDIT_COURSE
+} from "../types";
 const initialState = {
   data: [
     {
@@ -41,6 +47,12 @@ export default function Courses(state = initialState, action) {
       };
 
     case successAction(COURSE):
+      console.log(action);
+      return {
+        ...state,
+        data: [...state.data, action.data]
+      };
+    case successAction(EDIT_COURSE):
       console.log(action);
       return {
         ...state,
