@@ -31,6 +31,10 @@ class Courses extends React.Component {
           </div>
         </div>
         <AddButton></AddButton>
+        <div className="course-line">
+          <div>Name</div>
+          <div>Code</div>
+        </div>
         <div className="course-container">
           {this.props.courses.map(courses => (
             <CourseLine courses={courses}></CourseLine>

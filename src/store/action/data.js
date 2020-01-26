@@ -4,14 +4,15 @@ import {
   DELETE_COURSE,
   EDIT_COURSE,
   DELETE_USER,
+  EDIT_USER,
   USER
 } from "../types";
 
 export function deleteCourse(id) {
-  return dispatch => dispatch({ type: successAction(DELETE_COURSE), data: id });
+  return { type: successAction(DELETE_COURSE), data: id };
 }
 export function addCourse(course) {
-  return dispatch => dispatch({ type: successAction(COURSE), data: course });
+  return { type: successAction(COURSE), data: course };
 }
 export function editCourse(id, courseName) {
   return dispatch =>
@@ -22,4 +23,8 @@ export function deleteUser(id) {
 }
 export function addUser(user) {
   return { type: successAction(USER), data: user };
+}
+export function editUser(id, userName) {
+  return dispatch =>
+    dispatch({ type: successAction(EDIT_USER), data: { id, userName } });
 }

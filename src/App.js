@@ -21,6 +21,7 @@ function App() {
             <>
               <Route path="/users" component={Users} />
               <Route path="/" component={Courses} />
+              <Route path="/corses" component={Courses} />
             </>
           </Router>
         </PersistGate>

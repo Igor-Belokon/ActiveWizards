@@ -1,5 +1,5 @@
 import {
-  REG_FORM,
+  EDIT_USER,
   USER,
   successAction,
   failureAction,
@@ -15,67 +15,42 @@ const initialState = {
     {
       username: "Vasy Pupkin",
       curseId: "0001",
-      userId: "1"
+      id: "1"
     },
     {
       username: "Ada Laveis",
       curseId: "0002",
-      userId: "2"
+      id: "2"
     },
     {
       username: "Ada Laveis",
       curseId: "0003",
-      userId: "3"
+      id: "3"
     },
     {
       username: "Ada Laveis",
       curseId: "0004",
-      userId: "4"
+      id: "4"
     },
     {
       username: "Ada Laveis",
       curseId: "0005",
-      userId: "5"
+      id: "5"
     },
     {
       username: "Ada Laveis",
       curseId: "0001",
-      userId: "6"
+      id: "6"
     },
     {
       username: "Ada Laveis",
       curseId: "0002",
-      userId: "7"
+      id: "7"
     },
     {
       username: "Ada Laveis",
       curseId: "0000",
-      userId: "8"
-    },
-    {
-      username: "Ada Laveis",
-      curseId: "0000",
-      userId: "9"
-    },
-    {
-      username: "Ada Laveis",
-      curseId: "0001",
-      userId: "10"
-    },
-    {
-      username: "Ada Laveis",
-      curseId: "0002",
-      userId: "11"
-    },
-    {
-      username: "Ada Laveis",
-      curseId: "0004",
-      userId: "12"
-    },
-    {
-      username: "Ada Laveis",
-      curseId: "0003",
-      userId: "13"
+      id: "8"
     }
   ]
 };
@@ -88,16 +63,21 @@ export default function User(state = initialState, action) {
         ...state,
         data: [...state.data, action.data]
       };
-    case successAction(REG_FORM):
+    case successAction(EDIT_USER):
+      console.log(action);
       return {
         ...state,
-        someData: [...state.someData, action.someData]
+        data: state.data.map(user =>
+          user.id !== action.data.id
+            ? user
+            : { ...user, username: action.data.userName }
+        )
       };
     case successAction(DELETE_USER):
       console.log(action);
       return {
         ...state,
-        data: state.data.filter(user => user.userId !== action.data)
+        data: state.data.filter(user => user.id !== action.data)
       };
     default:
       return state;

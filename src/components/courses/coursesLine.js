@@ -12,7 +12,6 @@ class CourseLine extends React.Component {
     this.setState({ content: !this.state.content });
   };
   onPress = event => {
-    console.log("Event", event.key);
     if (event.key === "Enter") {
       let newTitle = event.target.innerText;
 

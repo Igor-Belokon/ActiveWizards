@@ -18,7 +18,7 @@ class Courses extends React.Component {
   render() {
     const { courses } = this.state;
     if (courses) {
-      return <Redirect to="/" />;
+      return <Redirect to="/corses" />;
     }
     return (
       <div>
@@ -29,7 +29,7 @@ class Courses extends React.Component {
           <div className="header-button">Users</div>
         </div>
         <AddButton></AddButton>
-        <div className="course-container">
+        <div className="course-line">
           <div>Name</div>
           <div>Code</div>
         </div>
